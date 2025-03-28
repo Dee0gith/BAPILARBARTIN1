@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<center>
+<style>
+body {
+  font-family: "Times New Roman", "Arial", serif, Times, "Sans-serif";
+background-image: url('bg2.jpg');
+background-repeat:no-repeat;
+background attachment:fixed;
+background-size:cover;
+}
+</style>
+
+<h1>CEBU TRAVELS</h1>
+    <h2>Login</h2>
+		<td align="center"><img src="qr.png"width="300px"height"200px" alt="qr"/a></p></td>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="button" onclick="validateLogin()">Login</button>
+    </form>
+    
+    <p id="message"></p>
+    
+    <script>
+        function validateLogin() {
+            const validUsername = "BapilarBartin";
+            const validPassword = "123";
+            const redirectURL = "index.html";
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === validUsername && password === validPassword) {
+                window.location.href = redirectURL; 
+            } else {
+                document.getElementById("message").innerText = "Invalid username or password. Try again.";
+            }
+        }
+    </script>
+</center>
+</body>
+</html>
